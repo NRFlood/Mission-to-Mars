@@ -108,7 +108,8 @@ def mars_facts():
 def hemispheres(browser):
     url = 'https://marshemispheres.com/'
     browser.visit(url)
-
+    image_urls = browser.find_by_css('a.product-item img')
+    
     # Scrape Hemisphere data with code from Mission_to_Mars_Challenge.py file
     hemisphere_image_urls = []
     for i in range(len(image_urls)):
